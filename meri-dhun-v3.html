@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="HfDg7xzUUZUW0rCJxBydhGa2hClkPFcoi1T7-1QAhjc" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meri Dhun — Apne Gaane, Apni Pehchaan</title>
+<meta name="description" content="Meri Dhun par apne original gaane aur short videos sunen aur dekhen. Independent artists ka apna music platform.">
+<meta property="og:title" content="Meri Dhun">
+<meta property="og:description" content="Apne original gaane aur short videos ek jagah — Meri Dhun par.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0716'/%3E%3Ccircle cx='50' cy='50' r='28' fill='%23ff5da8'/%3E%3Ccircle cx='50' cy='50' r='9' fill='%230b0716'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8954963673779691"
+     crossorigin="anonymous"></script>
+<style>
+  :root{
+    --bg:#0b0716; --surface:#181128; --surface-2:#211a3a;
+    --amber:#ff5da8; --amber-bright:#ff8fc4; --accent2:#8b6bff;
+    --sand:#f6eefc; --muted:#a89bd1; --line: rgba(246,238,252,0.10); --green:#37e6b0;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(900px 500px at 10% -10%, rgba(139,107,255,0.20), transparent 55%),
+      radial-gradient(700px 450px at 100% 15%, rgba(255,93,168,0.14), transparent 55%),
+      var(--bg);
+    color:var(--sand); font-family:'Manrope', sans-serif; min-height:100vh; padding-bottom:100px;
+  }
+  .hero{ padding:54px 20px 30px; text-align:center; position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
+  .hero::before{
+    content:''; position:absolute; inset:0;
+    background: radial-gradient(420px 220px at 25% 0%, rgba(255,93,168,0.25), transparent 60%),
+                radial-gradient(380px 220px at 80% 10%, rgba(139,107,255,0.22), transparent 60%);
+    pointer-events:none;
+  }
+  .vinyl{
+    width:64px; height:64px; margin:0 auto 14px; border-radius:50%; position:relative; z-index:1;
+    background: radial-gradient(circle at center, var(--amber) 0 8px, #0d0716 8px 9px, #0d0716 9px 11px, #2a1f4d 11px),
+                repeating-radial-gradient(circle at center, #241a42 0px, #241a42 2px, #150f27 2px, #150f27 4px);
+    box-shadow: 0 0 0 1px var(--line), 0 10px 30px rgba(255,93,168,0.25);
+    animation: spin 6s linear infinite; animation-play-state: paused;
+  }
+  .vinyl.spinning{ animation-play-state: running; }
+  @keyframes spin{ from{ transform:rotate(0deg); } to{ transform:rotate(360deg); } }
+  .hero h1{
+    font-family:'Fraunces', serif; font-weight:600; font-size:clamp(30px,6vw,44px); margin:0 0 6px;
+    letter-spacing:-0.01em; position:relative; z-index:1;
+    background: linear-gradient(100deg, var(--sand) 30%, var(--amber-bright));
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  .hero h1 em{ font-style:italic; }
+  .hero p{ margin:0; color:var(--muted); font-size:14px; position:relative; z-index:1; }
+  .hero .stats{ display:flex; justify-content:center; gap:22px; margin-top:16px; font-size:12px; color:var(--muted); position:relative; z-index:1; }
+  .hero .stats b{ color:var(--amber-bright); font-size:15px; display:block; font-family:'Fraunces', serif; }
+
+  .wrap{ max-width:760px; margin:0 auto; padding:0 18px; }
+
+  .auth-bar{ max-width:760px; margin:16px auto 0; padding:0 18px; display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; }
+  .premium-status{ font-size:12px; color:var(--muted); }
+  .premium-status.active{ color:var(--green); font-weight:700; }
+  .auth-actions{ display:flex; gap:8px; }
+  .admin-btn{ background:var(--surface-2); color:var(--sand); border:1px solid var(--line); padding:9px 14px; border-radius:9px; cursor:pointer; font-size:12.5px; font-family:'Manrope',sans-serif; }
+
+  .tab-row{ max-width:760px; margin:18px auto 0; padding:0 18px; display:flex; gap:8px; }
+  .tab-btn{ flex:1; padding:11px; border-radius:10px; border:1px solid var(--line); background:var(--surface); color:var(--muted); font-weight:700; font-size:13.5px; cursor:pointer; }
+  .tab-btn.active{ background:linear-gradient(135deg,var(--amber),var(--accent2)); color:#fff; border-color:transparent; }
+
+  .ad-slot{ max-width:760px; margin:20px auto 0; padding:0 18px; }
+  .ad-box{ border:1px dashed rgba(246,238,252,0.22); border-radius:10px; padding:16px; text-align:center; color:var(--muted); font-size:12.5px; }
+
+  .add-card{
+    background: linear-gradient(165deg, var(--surface), #130c22); border:1px solid var(--line); border-radius:18px;
+    padding:22px; margin-top:22px; box-shadow: 0 16px 36px rgba(0,0,0,0.35); position:relative;
+  }
+  .add-card h2{ font-family:'Fraunces', serif; font-weight:600; font-size:18px; margin:0 0 16px; color:var(--amber-bright); display:flex; align-items:center; gap:8px; }
+  .type-toggle{ display:flex; gap:8px; margin-bottom:16px; }
+  .type-toggle button{ flex:1; padding:9px; border-radius:8px; border:1px solid var(--line); background:var(--surface-2); color:var(--muted); font-weight:600; font-size:12.5px; cursor:pointer; }
+  .type-toggle button.active{ background:var(--amber); color:#fff; border-color:transparent; }
+  .field-row{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+  .field-row.single{ grid-template-columns:1fr; }
+  @media (max-width:520px){ .field-row{ grid-template-columns:1fr; } }
+  label{ display:block; font-size:11.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted); margin-bottom:6px; }
+  input[type="text"], input[type="email"], input[type="password"]{
+    width:100%; background:var(--surface-2); border:1px solid var(--line); color:var(--sand); padding:11px 13px;
+    border-radius:9px; font-family:'Manrope', sans-serif; font-size:13.5px;
+  }
+  input:focus{ outline:none; border-color:var(--amber); box-shadow: 0 0 0 3px rgba(255,93,168,0.15); }
+  input[type="file"]{ background:var(--surface-2); border:1px solid var(--line); color:var(--muted); padding:10px 12px; border-radius:9px; width:100%; font-size:12.5px; }
+  .hint{ font-size:11.5px; color:var(--muted); margin-top:5px; }
+  .add-btn{
+    margin-top:8px; background: linear-gradient(135deg, var(--amber), var(--accent2)); color:#fff; border:none;
+    padding:13px 26px; border-radius:10px; font-weight:700; font-size:14px; cursor:pointer;
+    box-shadow: 0 8px 22px rgba(255,93,168,0.3);
+  }
+  .add-btn:disabled{ opacity:0.6; cursor:not-allowed; box-shadow:none; }
+
+  .progress-wrap{ margin-top:12px; display:none; }
+  .progress-wrap.show{ display:block; }
+  .progress-bar{ height:6px; background:var(--surface-2); border-radius:4px; overflow:hidden; }
+  .progress-fill{ height:100%; background: linear-gradient(90deg, var(--amber), var(--accent2)); width:0%; transition:width 0.2s ease; }
+  .progress-label{ font-size:11.5px; color:var(--muted); margin-top:6px; }
+
+  .section-title{ font-family:'Fraunces', serif; font-weight:600; font-size:19px; margin:26px 0 14px; display:flex; align-items:center; gap:8px; }
+  .live-dot{ width:7px; height:7px; border-radius:50%; background:var(--green); display:inline-block; box-shadow: 0 0 8px var(--green); }
+
+  .card-list{ display:flex; flex-direction:column; gap:11px; }
+  .item-card{
+    background: linear-gradient(165deg, var(--surface), #140d24); border:1px solid var(--line); border-radius:14px; padding:12px;
+  }
+  .item-top{ display:flex; align-items:center; gap:14px; }
+  .cover{ width:58px; height:58px; border-radius:10px; object-fit:cover; background:var(--surface-2); flex-shrink:0; box-shadow: 0 3px 12px rgba(0,0,0,0.4); }
+  .item-info{ flex:1; min-width:0; }
+  .item-info .t{ font-weight:700; font-size:14.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .item-info .a{ font-size:12px; color:var(--muted); margin-top:2px; }
+  .item-info .plays{ font-size:11px; color:var(--amber-bright); margin-top:3px; font-weight:600; }
+  .play-btn{
+    width:40px; height:40px; border-radius:50%; background: linear-gradient(135deg, var(--amber), var(--accent2)); border:none;
+    color:#fff; font-size:14px; cursor:pointer; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+    box-shadow: 0 4px 14px rgba(255,93,168,0.35);
+  }
+  .video-el{ width:100%; border-radius:10px; margin-top:10px; background:#000; max-height:360px; }
+  .actions{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+  .action-btn{ background:var(--surface-2); border:1px solid var(--line); color:var(--sand); padding:7px 10px; border-radius:8px; cursor:pointer; font-size:12px; }
+  .comments{ margin-top:10px; padding:10px; background:var(--surface-2); border-radius:10px; }
+  .comment-row{ display:flex; gap:7px; margin-top:7px; }
+  .comment-row input{ flex:1; padding:8px; border-radius:7px; border:1px solid var(--line); background:var(--surface); color:var(--sand); }
+  .comment-list{ margin-top:8px; font-size:12px; }
+  .comment{ padding:6px; margin-top:5px; background:var(--surface); border-radius:7px; }
+  .del-btn{ background:none; border:none; color:var(--muted); font-size:13px; cursor:pointer; padding:6px; flex-shrink:0; }
+  .del-btn:hover{ color:var(--amber); }
+  .empty{ text-align:center; padding:36px 10px; color:var(--muted); font-size:13.5px; }
+
+  .premium-banner{ margin-top:22px; }
+  .premium-box{ background:linear-gradient(135deg,#2a1f4d,#211a3a); border:1px solid rgba(255,143,196,.45); border-radius:16px; padding:18px; text-align:center; }
+  .premium-box h3{ margin:0 0 6px; color:var(--amber-bright); }
+  .premium-buy{ margin-top:10px; background:linear-gradient(135deg,var(--amber),var(--accent2)); color:#fff; border:none; padding:11px 22px; border-radius:9px; font-weight:700; cursor:pointer; }
+
+  .modal{ position:fixed; inset:0; background:rgba(0,0,0,.72); display:none; align-items:center; justify-content:center; padding:20px; z-index:100; }
+  .modal.show{ display:flex; }
+  .modal-card{ width:min(420px,100%); background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:24px; text-align:left; max-height:85vh; overflow-y:auto; }
+  .modal-card h2{ color:var(--amber-bright); margin-top:0; }
+  .close-modal{ float:right; background:none; border:none; color:var(--muted); font-size:18px; cursor:pointer; }
+  .modal-input{ width:100%; padding:10px; margin:6px 0; border-radius:8px; border:1px solid var(--line); background:var(--surface-2); color:var(--sand); }
+  .plan-choice{ display:flex; gap:8px; margin:10px 0; }
+  .plan-choice button{ flex:1; padding:12px 8px; border-radius:10px; border:1px solid var(--line); background:var(--surface-2); color:var(--sand); cursor:pointer; text-align:center; font-size:12.5px; }
+  .plan-choice button.active{ background:var(--amber); border-color:transparent; color:#fff; }
+  .pay-details{ background:var(--surface-2); border:1px solid var(--line); border-radius:12px; padding:14px; margin:14px 0; }
+  .pay-number{ font-size:20px; font-weight:700; color:var(--amber-bright); letter-spacing:1px; }
+  .pay-note{ font-size:11px; color:var(--muted); margin-top:10px; }
+
+  .admin-panel{ max-width:760px; margin:20px auto 0; padding:18px; background:var(--surface); border:1px solid var(--line); border-radius:16px; display:none; }
+  .admin-panel.show{ display:block; }
+  .admin-item{ padding:10px; margin-top:8px; background:var(--surface-2); border-radius:9px; font-size:13px; }
+
+  .player-bar{
+    position:fixed; bottom:0; left:0; right:0; background: rgba(24,17,40,0.92); backdrop-filter: blur(14px);
+    border-top:1px solid var(--line); padding:12px 18px; display:none; align-items:center; gap:12px; z-index:20;
+    box-shadow: 0 -10px 28px rgba(0,0,0,0.4);
+  }
+  .player-bar.show{ display:flex; }
+  .player-bar .cover{ width:44px; height:44px; border-radius:9px; }
+  .player-bar-info{ flex:1; min-width:0; }
+  .player-bar-info .t{ font-size:13px; font-weight:700; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .player-bar-info .a{ font-size:11px; color:var(--muted); }
+  .pb-btn{ background: linear-gradient(135deg, var(--amber), var(--accent2)); border:none; color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:13px; flex-shrink:0; }
+
+  .lock-screen{ text-align:center; padding:10px 0; }
+  .lock-icon{ font-size:30px; margin-bottom:8px; }
+  .lock-title{ font-family:'Fraunces', serif; font-size:15px; margin-bottom:4px; }
+
+  /* Toast */
+  .toast{
+    position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--surface-2); color:var(--sand); border:1px solid var(--line);
+    padding:11px 20px; border-radius:10px; font-size:13px; z-index:200;
+    box-shadow:0 8px 24px rgba(0,0,0,0.4); opacity:0; transition:all 0.25s ease; pointer-events:none;
+    max-width:88%; text-align:center;
+  }
+  .toast.show{ opacity:1; transform:translateX(-50%) translateY(0); }
+
+  /* Search / filter bar */
+  .filter-bar{ display:flex; gap:8px; margin-top:16px; flex-wrap:wrap; }
+  .filter-bar input[type="text"]{ flex:2; min-width:140px; }
+  .filter-bar select{ flex:1; min-width:110px; background:var(--surface-2); border:1px solid var(--line); color:var(--sand); padding:11px 10px; border-radius:9px; font-size:13px; }
+  .genre-chips{ display:flex; gap:7px; margin-top:10px; overflow-x:auto; padding-bottom:2px; }
+  .genre-chip{ flex-shrink:0; padding:6px 14px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); color:var(--muted); font-size:12px; cursor:pointer; }
+  .genre-chip.active{ background:var(--amber); color:#fff; border-color:transparent; }
+
+  /* Spinner */
+  .spinner-wrap{ text-align:center; padding:30px 0; }
+  .spinner{ width:34px; height:34px; border:3px solid var(--surface-2); border-top-color:var(--amber); border-radius:50%; margin:0 auto; animation:spinload 0.8s linear infinite; }
+  @keyframes spinload{ to{ transform:rotate(360deg); } }
+
+  /* Footer */
+  .site-footer{ max-width:760px; margin:40px auto 0; padding:24px 18px; border-top:1px solid var(--line); text-align:center; }
+  .footer-links{ display:flex; justify-content:center; gap:18px; flex-wrap:wrap; margin-bottom:10px; }
+  .footer-links a{ color:var(--muted); font-size:12.5px; text-decoration:none; cursor:pointer; }
+  .footer-links a:hover{ color:var(--amber-bright); }
+  .footer-copy{ font-size:11.5px; color:var(--muted); }
+
+  .profile-row{ padding:10px 0; border-bottom:1px solid var(--line); font-size:13px; }
+  .profile-row:last-child{ border-bottom:none; }
+  .profile-row b{ color:var(--amber-bright); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="vinyl" id="heroVinyl"></div>
+  <h1>Meri <em>Dhun</em></h1>
+  <p>Apne gaane aur videos share karo, duniya sune</p>
+  <div class="stats">
+    <div><b id="statSongs">0</b>Gaane</div>
+    <div><b id="statVideos">0</b>Videos</div>
+    <div><b id="statPlays">0</b>Total Plays</div>
+  </div>
+</div>
+
+<div class="auth-bar">
+  <div class="premium-status" id="premiumStatus">Login karke Premium status dekhein</div>
+  <div class="auth-actions">
+    <button class="admin-btn" id="profileBtn" onclick="openProfile()" style="display:none">👤 Profile</button>
+    <button class="admin-btn" id="loginBtn" onclick="openAuth()">🔐 Login / Signup</button>
+    <button class="admin-btn" id="logoutBtn" onclick="logoutUser()" style="display:none">Logout</button>
+  </div>
+</div>
+
+<div class="tab-row">
+  <button class="tab-btn active" id="tabSongsBtn" onclick="switchTab('songs')">🎵 Gaane</button>
+  <button class="tab-btn" id="tabVideosBtn" onclick="switchTab('videos')">🎬 Videos</button>
+</div>
+
+<div class="admin-panel" id="adminPanel">
+  <h2 style="font-family:'Fraunces',serif;color:var(--amber-bright);margin-top:0">🛠️ Admin Panel</h2>
+  <p style="font-size:13px;color:var(--muted)">Payment requests dekhein aur approve karein.</p>
+  <div id="paymentRequestsList">Loading...</div>
+</div>
+
+<div class="premium-banner wrap">
+  <div class="premium-box">
+    <h3>⭐ Meri Dhun Premium</h3>
+    <div style="font-size:13px;color:var(--muted)">Premium members songs/videos download kar sakte hain.</div>
+    <button class="premium-buy" onclick="openPremium()">Premium Buy Karein</button>
+  </div>
+</div>
+
+<div class="ad-slot"><div class="ad-box">Ad space</div></div>
+
+<div class="wrap">
+  <div class="add-card" id="addCard">
+    <div class="lock-screen" id="lockScreen">
+      <div class="lock-icon">🔒</div>
+      <div class="lock-title">Sirf Owner Upload Kar Sakta Hai</div>
+      <input type="text" id="uploadPassword" placeholder="Password daalein" style="max-width:220px;margin:14px auto 10px;">
+      <button class="add-btn" onclick="checkPassword()">Unlock</button>
+      <div class="hint" id="lockError" style="color:#ff5da8;margin-top:8px;"></div>
+    </div>
+    <div id="uploadForm" style="display:none;">
+      <h2>♫ Naya Content Add Karein</h2>
+      <div class="type-toggle">
+        <button id="typeSongBtn" class="active" onclick="setUploadType('song')">🎵 Song</button>
+        <button id="typeVideoBtn" onclick="setUploadType('video')">🎬 Video</button>
+      </div>
+      <div class="field-row">
+        <div><label>Naam</label><input type="text" id="titleInput" placeholder="e.g. Ek Saans Mein"></div>
+        <div><label>Artist / Uploader</label><input type="text" id="artistInput" placeholder="Aapka naam"></div>
+      </div>
+      <div class="field-row single">
+        <div><label>Genre</label>
+          <select id="genreInput" style="width:100%;background:var(--surface-2);border:1px solid var(--line);color:var(--sand);padding:11px 13px;border-radius:9px;font-size:13.5px;">
+            <option value="Romantic">Romantic</option>
+            <option value="Sad">Sad</option>
+            <option value="Party">Party</option>
+            <option value="Rap">Rap</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row single">
+        <div><label id="fileLabel">MP3 file select karein</label><input type="file" id="mediaFile" accept="audio/*"></div>
+      </div>
+      <div class="field-row single" id="coverFieldWrap">
+        <div><label>Cover image (optional)</label><input type="file" id="coverFile" accept="image/*"></div>
+      </div>
+      <button class="add-btn" id="addBtn" onclick="addContent()">+ Add Karein</button>
+      <div class="progress-wrap" id="progressWrap">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-label" id="progressLabel">Upload ho raha hai...</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-title" id="songsSectionTitle"><span class="live-dot"></span> Sab Ke Gaane</div>
+  <div class="filter-bar">
+    <input type="text" id="songSearch" placeholder="🔍 Gaana dhoondein..." oninput="render()">
+    <select id="songSort" onchange="render()">
+      <option value="newest">Naya Sabse Pehle</option>
+      <option value="plays">Sabse Zyada Suna Gaya</option>
+    </select>
+  </div>
+  <div class="genre-chips" id="songGenreChips"></div>
+  <div class="spinner-wrap" id="songSpinner"><div class="spinner"></div></div>
+  <div class="card-list" id="songList"></div>
+  <div class="empty" id="songsEmpty" style="display:none;">Abhi koi gaana nahi hai</div>
+
+  <div class="section-title" id="videosSectionTitle" style="display:none;"><span class="live-dot"></span> Sab Ki Videos</div>
+  <div class="filter-bar" id="videoFilterBar" style="display:none;">
+    <input type="text" id="videoSearch" placeholder="🔍 Video dhoondein..." oninput="render()">
+    <select id="videoSort" onchange="render()">
+      <option value="newest">Naya Sabse Pehle</option>
+      <option value="plays">Sabse Zyada Dekha Gaya</option>
+    </select>
+  </div>
+  <div class="spinner-wrap" id="videoSpinner" style="display:none;"><div class="spinner"></div></div>
+  <div class="card-list" id="videoList" style="display:none;"></div>
+  <div class="empty" id="videosEmpty" style="display:none;">Abhi koi video nahi hai</div>
+</div>
+
+<div class="ad-slot"><div class="ad-box">Ad space</div></div>
+
+<!-- Auth Modal -->
+<div class="modal" id="authModal">
+  <div class="modal-card">
+    <button class="close-modal" onclick="closeAuth()">✕</button>
+    <h2>🔐 Meri Dhun Account</h2>
+    <input class="modal-input" id="authEmail" type="email" placeholder="Email address">
+    <input class="modal-input" id="authPassword" type="password" placeholder="Password (minimum 6 characters)">
+    <button class="premium-buy" onclick="loginUser()">Login</button>
+    <button class="admin-btn" onclick="signupUser()" style="margin-left:6px">Signup</button>
+  </div>
+</div>
+
+<!-- Premium Modal -->
+<div class="modal" id="premiumModal">
+  <div class="modal-card">
+    <button class="close-modal" onclick="closePremium()">✕</button>
+    <h2>⭐ Meri Dhun Premium</h2>
+    <p style="font-size:13px;color:var(--muted)">Pehle login karein, phir plan choose karke payment karein.</p>
+    <div class="plan-choice">
+      <button id="planWeeklyBtn" class="active" onclick="choosePlan('weekly')">Weekly<br>Rs.100 / 7 din</button>
+      <button id="planMonthlyBtn" onclick="choosePlan('monthly')">Monthly<br>Rs.500 / 30 din</button>
+    </div>
+    <div class="pay-details">
+      <b>💚 Easypaisa Payment</b>
+      <div class="pay-note">Is number par payment bhejein:</div>
+      <div class="pay-number">03101272800</div>
+    </div>
+    <div class="pay-form">
+      <input class="modal-input" id="transactionId" placeholder="Easypaisa Transaction ID">
+      <button class="premium-buy" onclick="submitPaymentRequest()" style="width:100%;margin-top:8px;">Payment Request Submit Karein</button>
+    </div>
+    <p class="pay-note">Payment verify hone ke baad Premium access approve kiya jayega (aapke account mein).</p>
+  </div>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal" id="profileModal">
+  <div class="modal-card">
+    <button class="close-modal" onclick="closeProfile()">✕</button>
+    <h2>👤 Aapka Profile</h2>
+    <div id="profileContent"></div>
+  </div>
+</div>
+
+<!-- Info Modal (About / Contact / Privacy / Terms) -->
+<div class="modal" id="infoModal">
+  <div class="modal-card">
+    <button class="close-modal" onclick="closeInfo()">✕</button>
+    <h2 id="infoTitle"></h2>
+    <div id="infoContent" style="font-size:13px;color:var(--muted);line-height:1.7;"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-links">
+    <a onclick="openInfo('about')">About</a>
+    <a onclick="openInfo('contact')">Contact</a>
+    <a onclick="openInfo('privacy')">Privacy Policy</a>
+    <a onclick="openInfo('terms')">Terms of Service</a>
+  </div>
+  <div class="footer-copy">© 2026 Meri Dhun. Sab haq mahfooz.</div>
+</footer>
+
+<div class="toast" id="toastBox"></div>
+
+<div class="player-bar" id="playerBar">
+  <img class="cover" id="pbCover" src="">
+  <div class="player-bar-info">
+    <div class="t" id="pbTitle"></div>
+    <div class="a" id="pbArtist"></div>
+  </div>
+  <button class="pb-btn" id="pbToggle" onclick="togglePlay()">▶</button>
+  <audio id="audioEl"></audio>
+</div>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+  import {
+    getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js";
+  import {
+    getFirestore, collection, addDoc, onSnapshot, doc, setDoc, getDoc,
+    updateDoc, deleteDoc, increment, orderBy, query, getDocs
+  } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyC3AdPwJdntaF3reap4VT03FveakG5Nt2E",
+    authDomain: "meri-dhun-aa79a.firebaseapp.com",
+    projectId: "meri-dhun-aa79a",
+    storageBucket: "meri-dhun-aa79a.firebasestorage.app",
+    messagingSenderId: "1042835727543",
+    appId: "1:1042835727543:web:81014e9e02b36c34a35932",
+    measurementId: "G-Z96959QWQD"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+  const auth = getAuth(app);
+
+  const CLOUDINARY_CLOUD_NAME = "vxbj4xpi";
+  const CLOUDINARY_UPLOAD_PRESET = "ml_default";
+  const UPLOAD_PASSWORD = "Killer9211";
+  const ADMIN_EMAIL = "adibhatti12345@gmail.com";
+
+  function toast(msg){
+    const t = document.getElementById('toastBox');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  const songsCol = collection(db, "songs");
+  const videosCol = collection(db, "videos");
+  const paymentRequestsCol = collection(db, "paymentRequests");
+
+  let songs = [], videos = [];
+  let currentUser = null;
+  let currentUserPremiumExpiry = 0;
+  let activeTab = 'songs';
+  let uploadType = 'song';
+  let selectedPlan = 'weekly';
+  let activeSongGenre = 'All';
+  let songsLoaded = false, videosLoaded = false;
+
+  window.openProfile = function(){
+    if(!currentUser) return;
+    const box = document.getElementById('profileContent');
+    const likedCount = JSON.parse(localStorage.getItem('meriDhunLikes') || '[]').length;
+    const premiumLine = isPremiumActive()
+      ? `⭐ Active — ${new Date(currentUserPremiumExpiry).toLocaleDateString()} tak`
+      : 'Koi active Premium nahi';
+    box.innerHTML = `
+      <div class="profile-row"><b>Email:</b> ${escapeHtml(currentUser.email)}</div>
+      <div class="profile-row"><b>Premium Status:</b> ${premiumLine}</div>
+      <div class="profile-row"><b>Liked Items:</b> ${likedCount}</div>
+    `;
+    document.getElementById('profileModal').classList.add('show');
+  };
+  window.closeProfile = () => document.getElementById('profileModal').classList.remove('show');
+
+  const INFO_CONTENT = {
+    about: ['About Meri Dhun', `Meri Dhun ek independent platform hai jahan artists apne original gaane aur short videos share kar sakte hain. Yeh ek personal project hai jo music aur video content ko ek jagah laane ke liye banaya gaya hai.`],
+    contact: ['Contact Us', `Kisi bhi sawal, sujhaav, ya masle ke liye humein email karein: contact@meridhun.example<br><br>Hum jawab dene ki koshish karte hain jald az jald.`],
+    privacy: ['Privacy Policy', `Yeh website users ka email (login ke liye) aur upload kiya gaya content (gaane/videos) store karti hai. Payment verification ke liye Transaction ID li jaati hai — koi bank/card detail store nahi hoti. Data teesri party ko becha nahi jaata. Ads Google AdSense ke zariye dikhaye ja sakte hain, jo apni privacy policy follow karta hai.`],
+    terms: ['Terms of Service', `Is website par upload kiya gaya content sirf uploader ka apna original kaam hona chahiye. Premium subscription payment ke baad manual verification se activate hoti hai aur is website ke istemal se aap in shartoun se mutafiq hote hain. Hum kisi bhi waqt content hata sakte hain jo policies ke khilaf ho.`]
+  };
+  window.openInfo = function(key){
+    document.getElementById('infoTitle').textContent = INFO_CONTENT[key][0];
+    document.getElementById('infoContent').innerHTML = INFO_CONTENT[key][1];
+    document.getElementById('infoModal').classList.add('show');
+  };
+  window.closeInfo = () => document.getElementById('infoModal').classList.remove('show');
+
+  window.filterGenre = function(g){
+    activeSongGenre = g;
+    render();
+  };
+
+  // ---------- AUTH ----------
+  window.openAuth = () => document.getElementById('authModal').classList.add('show');
+  window.closeAuth = () => document.getElementById('authModal').classList.remove('show');
+
+  window.signupUser = async function(){
+    const email = document.getElementById('authEmail').value.trim();
+    const password = document.getElementById('authPassword').value;
+    try{
+      const cred = await createUserWithEmailAndPassword(auth, email, password);
+      await setDoc(doc(db, 'users', cred.user.uid), { email, premiumExpiry: 0, premiumPlan: null }, { merge: true });
+      toast('Account ban gaya!');
+      closeAuth();
+    }catch(e){ toast(e.message); }
+  };
+
+  window.loginUser = async function(){
+    const email = document.getElementById('authEmail').value.trim();
+    const password = document.getElementById('authPassword').value;
+    try{ await signInWithEmailAndPassword(auth, email, password); closeAuth(); }
+    catch(e){ toast(e.message); }
+  };
+
+  window.logoutUser = () => signOut(auth);
+
+  let userDocUnsub = null;
+  onAuthStateChanged(auth, (user) => {
+    currentUser = user;
+    document.getElementById('loginBtn').style.display = user ? 'none' : 'inline-block';
+    document.getElementById('logoutBtn').style.display = user ? 'inline-block' : 'none';
+    document.getElementById('profileBtn').style.display = user ? 'inline-block' : 'none';
+
+    if(userDocUnsub) { userDocUnsub(); userDocUnsub = null; }
+
+    if(user){
+      userDocUnsub = onSnapshot(doc(db, 'users', user.uid), (snap) => {
+        const data = snap.data() || {};
+        currentUserPremiumExpiry = data.premiumExpiry || 0;
+        updatePremiumStatusUI();
+      });
+      const isAdmin = user.email === ADMIN_EMAIL;
+      document.getElementById('adminPanel').classList.toggle('show', isAdmin);
+      if(isAdmin) loadPaymentRequests();
+    } else {
+      currentUserPremiumExpiry = 0;
+      document.getElementById('adminPanel').classList.remove('show');
+      updatePremiumStatusUI();
+    }
+  });
+
+  function isPremiumActive(){ return currentUserPremiumExpiry && currentUserPremiumExpiry > Date.now(); }
+
+  function updatePremiumStatusUI(){
+    const el = document.getElementById('premiumStatus');
+    if(!currentUser){
+      el.textContent = 'Login karke Premium status dekhein';
+      el.classList.remove('active');
+    } else if(isPremiumActive()){
+      const d = new Date(currentUserPremiumExpiry);
+      el.textContent = `⭐ Premium active — ${d.toLocaleDateString()} tak`;
+      el.classList.add('active');
+    } else {
+      el.textContent = `${currentUser.email} — Premium nahi hai`;
+      el.classList.remove('active');
+    }
+    render();
+  }
+
+  // ---------- UPLOAD LOCK ----------
+  window.checkPassword = function(){
+    const input = document.getElementById('uploadPassword').value;
+    if(input === UPLOAD_PASSWORD){
+      document.getElementById('lockScreen').style.display = 'none';
+      document.getElementById('uploadForm').style.display = 'block';
+    } else {
+      document.getElementById('lockError').textContent = 'Galat password, dobara try karein';
+    }
+  };
+  document.getElementById('uploadPassword')?.addEventListener('keypress', (e) => { if(e.key === 'Enter') checkPassword(); });
+
+  window.setUploadType = function(type){
+    uploadType = type;
+    document.getElementById('typeSongBtn').classList.toggle('active', type === 'song');
+    document.getElementById('typeVideoBtn').classList.toggle('active', type === 'video');
+    document.getElementById('mediaFile').accept = type === 'song' ? 'audio/*' : 'video/*';
+    document.getElementById('fileLabel').textContent = type === 'song' ? 'MP3 file select karein' : 'Video file select karein';
+    document.getElementById('coverFieldWrap').style.display = type === 'song' ? 'block' : 'none';
+  };
+
+  // ---------- TABS ----------
+  window.switchTab = function(tab){
+    activeTab = tab;
+    document.getElementById('tabSongsBtn').classList.toggle('active', tab === 'songs');
+    document.getElementById('tabVideosBtn').classList.toggle('active', tab === 'videos');
+    document.getElementById('songsSectionTitle').style.display = tab === 'songs' ? 'flex' : 'none';
+    document.querySelector('.filter-bar').style.display = tab === 'songs' ? 'flex' : 'none';
+    document.getElementById('songGenreChips').style.display = tab === 'songs' ? 'flex' : 'none';
+    document.getElementById('songList').style.display = tab === 'songs' ? 'flex' : 'none';
+    document.getElementById('videosSectionTitle').style.display = tab === 'videos' ? 'flex' : 'none';
+    document.getElementById('videoFilterBar').style.display = tab === 'videos' ? 'flex' : 'none';
+    document.getElementById('videoList').style.display = tab === 'videos' ? 'flex' : 'none';
+    render();
+  };
+
+  // ---------- PREMIUM MODAL ----------
+  window.openPremium = function(){
+    if(!currentUser){ toast('Pehle login/signup karein.'); openAuth(); return; }
+    document.getElementById('premiumModal').classList.add('show');
+  };
+  window.closePremium = () => document.getElementById('premiumModal').classList.remove('show');
+  window.choosePlan = function(plan){
+    selectedPlan = plan;
+    document.getElementById('planWeeklyBtn').classList.toggle('active', plan === 'weekly');
+    document.getElementById('planMonthlyBtn').classList.toggle('active', plan === 'monthly');
+  };
+
+  window.submitPaymentRequest = async function(){
+    if(!currentUser){ toast('Pehle login karein.'); return; }
+    const transactionId = document.getElementById('transactionId').value.trim();
+    if(!transactionId){ toast('Transaction ID enter karein.'); return; }
+    try{
+      await addDoc(paymentRequestsCol, {
+        uid: currentUser.uid, email: currentUser.email,
+        plan: selectedPlan, transactionId, status: 'pending', createdAt: Date.now()
+      });
+      toast('Request submit ho gayi! Verification ke baad Premium activate ho jayega.');
+      document.getElementById('transactionId').value = '';
+      closePremium();
+    }catch(err){ toast('Submit nahi ho saka: ' + err.message); }
+  };
+
+  // ---------- ADMIN ----------
+  async function loadPaymentRequests(){
+    const box = document.getElementById('paymentRequestsList');
+    try{
+      const snap = await getDocs(paymentRequestsCol);
+      let requests = [];
+      snap.forEach(d => requests.push({ id: d.id, ...d.data() }));
+      requests.sort((a,b) => (b.createdAt||0) - (a.createdAt||0));
+      box.innerHTML = requests.length ? requests.map(r => `
+        <div class="admin-item">
+          <b>${escapeHtml(r.email||'Unknown')}</b> — Plan: ${escapeHtml(r.plan||'?')}<br>
+          Transaction ID: ${escapeHtml(r.transactionId||'')}<br>
+          Status: ${escapeHtml(r.status||'pending')}
+          ${r.status === 'pending' ? `<button class="action-btn" onclick="approvePayment('${r.id}','${r.uid}','${r.plan}')">✅ Approve</button>` : ''}
+        </div>`).join('') : 'No payment requests.';
+    }catch(e){ box.textContent = 'Load nahi ho saka: ' + e.message; }
+  }
+
+  window.approvePayment = async function(reqId, uid, plan){
+    try{
+      const days = plan === 'monthly' ? 30 : 7;
+      const newExpiry = Date.now() + days * 24 * 60 * 60 * 1000;
+      await setDoc(doc(db, 'users', uid), { premiumExpiry: newExpiry, premiumPlan: plan }, { merge: true });
+      await updateDoc(doc(db, 'paymentRequests', reqId), { status: 'approved', approvedAt: Date.now() });
+      toast('Approved! User ko premium mil gaya.');
+      loadPaymentRequests();
+    }catch(e){ toast(e.message); }
+  };
+
+  // ---------- UPLOAD ----------
+  async function uploadToCloudinary(file, resourceType, onProgress){
+    return new Promise((resolve, reject) => {
+      const url = `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/${resourceType}/upload`;
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.upload.onprogress = (e) => { if(e.lengthComputable && onProgress) onProgress(Math.round((e.loaded/e.total)*100)); };
+      xhr.onload = () => {
+        if(xhr.status >= 200 && xhr.status < 300) resolve(JSON.parse(xhr.responseText));
+        else reject(new Error('Upload failed: ' + xhr.responseText));
+      };
+      xhr.onerror = () => reject(new Error('Network error'));
+      xhr.send(formData);
+    });
+  }
+
+  window.addContent = async function(){
+    const title = document.getElementById('titleInput').value.trim();
+    const artist = document.getElementById('artistInput').value.trim();
+    const mediaFile = document.getElementById('mediaFile').files[0];
+    const coverFile = document.getElementById('coverFile').files[0];
+    if(!title){ toast('Naam zaroori hai'); return; }
+    if(!mediaFile){ toast('File select karein'); return; }
+
+    const addBtn = document.getElementById('addBtn');
+    const progressWrap = document.getElementById('progressWrap');
+    const progressFill = document.getElementById('progressFill');
+    const progressLabel = document.getElementById('progressLabel');
+    addBtn.disabled = true;
+    progressWrap.classList.add('show');
+
+    try{
+      progressLabel.textContent = 'Upload ho raha hai...';
+      const mediaResult = await uploadToCloudinary(mediaFile, 'video', (pct) => {
+        progressFill.style.width = (pct * (uploadType === 'song' ? 0.7 : 1)) + '%';
+      });
+
+      if(uploadType === 'song'){
+        let coverUrl = null;
+        if(coverFile){
+          progressLabel.textContent = 'Cover upload ho raha hai...';
+          const coverResult = await uploadToCloudinary(coverFile, 'image', (pct) => {
+            progressFill.style.width = (70 + pct * 0.3) + '%';
+          });
+          coverUrl = coverResult.secure_url;
+        }
+        await addDoc(songsCol, {
+          title, artist: artist || 'Unknown Artist', mp3Url: mediaResult.secure_url,
+          genre: document.getElementById('genreInput').value,
+          coverUrl, plays: 0, likes: 0, createdAt: Date.now()
+        });
+      } else {
+        await addDoc(videosCol, {
+          title, uploader: artist || 'Unknown', videoUrl: mediaResult.secure_url,
+          plays: 0, likes: 0, createdAt: Date.now()
+        });
+      }
+
+      document.getElementById('titleInput').value = '';
+      document.getElementById('artistInput').value = '';
+      document.getElementById('mediaFile').value = '';
+      document.getElementById('coverFile').value = '';
+      progressWrap.classList.remove('show');
+      progressFill.style.width = '0%';
+    }catch(err){
+      toast('Upload mein masla: ' + err.message);
+      progressWrap.classList.remove('show');
+    } finally {
+      addBtn.disabled = false;
+    }
+  };
+
+  window.removeSong = async function(id){ if(confirm('Hata dein?')) await deleteDoc(doc(db,'songs',id)); };
+  window.removeVideo = async function(id){ if(confirm('Hata dein?')) await deleteDoc(doc(db,'videos',id)); };
+
+  // ---------- PLAYBACK ----------
+  let currentId = null;
+  const audioEl = document.getElementById('audioEl');
+
+  window.playSong = async function(id){
+    const s = songs.find(s => s.id === id);
+    if(!s) return;
+    if(currentId !== id){
+      currentId = id;
+      audioEl.src = s.mp3Url;
+      document.getElementById('pbCover').src = s.coverUrl || defaultCover();
+      document.getElementById('pbTitle').textContent = s.title;
+      document.getElementById('pbArtist').textContent = s.artist;
+      document.getElementById('playerBar').classList.add('show');
+      try{
+        await audioEl.play();
+        document.getElementById('pbToggle').textContent = '⏸';
+        document.getElementById('heroVinyl').classList.add('spinning');
+        await updateDoc(doc(db,'songs',id), { plays: increment(1) });
+      }catch(err){ toast('Play nahi ho saka: ' + err.message); }
+    } else { togglePlay(); }
+    render();
+  };
+
+  window.togglePlay = function(){
+    const vinyl = document.getElementById('heroVinyl');
+    if(audioEl.paused){ audioEl.play(); document.getElementById('pbToggle').textContent = '⏸'; vinyl.classList.add('spinning'); }
+    else { audioEl.pause(); document.getElementById('pbToggle').textContent = '▶'; vinyl.classList.remove('spinning'); }
+    render();
+  };
+  audioEl.addEventListener('ended', () => {
+    document.getElementById('pbToggle').textContent = '▶';
+    document.getElementById('heroVinyl').classList.remove('spinning');
+    render();
+  });
+
+  window.playVideoCounted = async function(id){
+    try{ await updateDoc(doc(db,'videos',id), { plays: increment(1) }); }catch(e){}
+  };
+
+  // ---------- LIKES / SHARE / DOWNLOAD ----------
+  const likedItems = JSON.parse(localStorage.getItem('meriDhunLikes') || '[]');
+
+  window.likeItem = async function(kind, id){
+    const key = kind + '_' + id;
+    const liked = likedItems.includes(key);
+    await updateDoc(doc(db, kind === 'song' ? 'songs' : 'videos', id), { likes: increment(liked ? -1 : 1) });
+    if(liked) likedItems.splice(likedItems.indexOf(key),1); else likedItems.push(key);
+    localStorage.setItem('meriDhunLikes', JSON.stringify(likedItems));
+  };
+
+  window.shareItem = async function(kind, id){
+    const list = kind === 'song' ? songs : videos;
+    const s = list.find(x => x.id === id); if(!s) return;
+    try{
+      if(navigator.share) await navigator.share({ title: s.title, text: 'Meri Dhun: ' + s.title, url: location.href });
+      else { await navigator.clipboard.writeText(location.href); toast('Link copy ho gaya!'); }
+    }catch(e){}
+  };
+
+  window.downloadItem = function(kind, id){
+    if(!isPremiumActive()){
+      toast('Download ke liye Premium chahiye.');
+      openPremium();
+      return;
+    }
+    const list = kind === 'song' ? songs : videos;
+    const s = list.find(x => x.id === id); if(!s) return;
+    const url = kind === 'song' ? s.mp3Url : s.videoUrl;
+    const a = document.createElement('a');
+    a.href = url; a.download = (s.title || 'download'); a.target = '_blank';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+
+  window.addComment = async function(kind, id){
+    const n = document.getElementById('name_'+kind+'_'+id).value.trim() || 'Anonymous';
+    const t = document.getElementById('text_'+kind+'_'+id).value.trim();
+    if(!t) return;
+    await addDoc(collection(db, kind === 'song' ? 'songs' : 'videos', id, 'comments'), { name: n, text: t, createdAt: Date.now() });
+    document.getElementById('text_'+kind+'_'+id).value = '';
+    loadComments(kind, id);
+  };
+
+  async function loadComments(kind, id){
+    const box = document.querySelector('#comments_'+kind+'_'+id+' .comment-list');
+    if(!box) return;
+    const snap = await getDocs(collection(db, kind === 'song' ? 'songs' : 'videos', id, 'comments'));
+    let arr = []; snap.forEach(d => arr.push(d.data()));
+    arr.sort((a,b) => (b.createdAt||0) - (a.createdAt||0));
+    box.innerHTML = arr.length ? arr.map(c => `<div class="comment"><b>${escapeHtml(c.name)}</b>: ${escapeHtml(c.text)}</div>`).join('') : '<div class="comment">Abhi koi comment nahi.</div>';
+  }
+
+  // ---------- LIVE DATA ----------
+  onSnapshot(query(songsCol, orderBy('createdAt','desc')), (snap) => {
+    songs = []; snap.forEach(d => songs.push({ id: d.id, ...d.data() }));
+    songsLoaded = true; render();
+  });
+  onSnapshot(query(videosCol, orderBy('createdAt','desc')), (snap) => {
+    videos = []; snap.forEach(d => videos.push({ id: d.id, ...d.data() }));
+    videosLoaded = true; render();
+  });
+
+  function defaultCover(){
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect width="100" height="100" fill="#211a3a"/><circle cx="50" cy="50" r="18" fill="#ff5da8"/><circle cx="50" cy="50" r="6" fill="#0b0716"/></svg>`);
+  }
+  function escapeHtml(str){ const div = document.createElement('div'); div.textContent = str || ''; return div.innerHTML; }
+
+  function applySort(list, sortKey){
+    const arr = [...list];
+    if(sortKey === 'plays') arr.sort((a,b) => (b.plays||0) - (a.plays||0));
+    else arr.sort((a,b) => (b.createdAt||0) - (a.createdAt||0));
+    return arr;
+  }
+
+  function render(){
+    document.getElementById('statSongs').textContent = songs.length;
+    document.getElementById('statVideos').textContent = videos.length;
+    document.getElementById('statPlays').textContent =
+      songs.reduce((s,x)=>s+(x.plays||0),0) + videos.reduce((s,x)=>s+(x.plays||0),0);
+
+    // Genre chips
+    const genres = ['All', ...new Set(songs.map(s => s.genre).filter(Boolean))];
+    document.getElementById('songGenreChips').innerHTML = genres.map(g =>
+      `<button class="genre-chip ${activeSongGenre===g?'active':''}" onclick="filterGenre('${g}')">${escapeHtml(g)}</button>`
+    ).join('');
+
+    // Spinners
+    document.getElementById('songSpinner').style.display = songsLoaded ? 'none' : 'block';
+    document.getElementById('videoSpinner').style.display = (!videosLoaded && activeTab==='videos') ? 'block' : 'none';
+
+    // Songs — filter + sort
+    const songSearchVal = (document.getElementById('songSearch').value || '').toLowerCase();
+    let filteredSongs = songs.filter(s =>
+      (activeSongGenre === 'All' || s.genre === activeSongGenre) &&
+      (!songSearchVal || s.title.toLowerCase().includes(songSearchVal))
+    );
+    filteredSongs = applySort(filteredSongs, document.getElementById('songSort').value);
+
+    const songList = document.getElementById('songList');
+    const songsEmpty = document.getElementById('songsEmpty');
+    if(songsLoaded && !filteredSongs.length){ songList.innerHTML=''; songsEmpty.style.display='block'; }
+    else if(!songsLoaded){ songList.innerHTML=''; songsEmpty.style.display='none'; }
+    else{
+      songsEmpty.style.display='none';
+      songList.innerHTML = filteredSongs.map(s => `
+        <div class="item-card">
+          <div class="item-top">
+            <img class="cover" src="${s.coverUrl||defaultCover()}">
+            <div class="item-info"><div class="t">${escapeHtml(s.title)}</div><div class="a">${escapeHtml(s.artist)}${s.genre?' · '+escapeHtml(s.genre):''}</div><div class="plays">${s.plays||0} baar suna gaya</div></div>
+            <button class="play-btn" onclick="playSong('${s.id}')">${currentId===s.id && !audioEl.paused ? '⏸' : '▶'}</button>
+            <button class="del-btn" onclick="removeSong('${s.id}')">✕</button>
+          </div>
+          <div class="actions">
+            <button class="action-btn" onclick="likeItem('song','${s.id}')">❤️ Like (${s.likes||0})</button>
+            <button class="action-btn" onclick="shareItem('song','${s.id}')">📤 Share</button>
+            <button class="action-btn" onclick="downloadItem('song','${s.id}')">⬇️ Download</button>
+          </div>
+          <div class="comments" id="comments_song_${s.id}">
+            <b style="font-size:12px">💬 Comments</b>
+            <div class="comment-row"><input id="name_song_${s.id}" placeholder="Aapka naam"></div>
+            <div class="comment-row"><input id="text_song_${s.id}" placeholder="Comment likhein..."><button class="action-btn" onclick="addComment('song','${s.id}')">Post</button></div>
+            <div class="comment-list"></div>
+          </div>
+        </div>`).join('');
+      filteredSongs.forEach(s => loadComments('song', s.id));
+    }
+
+    // Videos — filter + sort
+    if(activeTab === 'videos'){
+      const videoSearchVal = (document.getElementById('videoSearch').value || '').toLowerCase();
+      let filteredVideos = videos.filter(v => !videoSearchVal || v.title.toLowerCase().includes(videoSearchVal));
+      filteredVideos = applySort(filteredVideos, document.getElementById('videoSort').value);
+
+      const videoList = document.getElementById('videoList');
+      const videosEmpty = document.getElementById('videosEmpty');
+      if(videosLoaded && !filteredVideos.length){ videoList.innerHTML=''; videosEmpty.style.display='block'; }
+      else if(!videosLoaded){ videoList.innerHTML=''; videosEmpty.style.display='none'; }
+      else{
+        videosEmpty.style.display='none';
+        videoList.innerHTML = filteredVideos.map(v => `
+          <div class="item-card">
+            <div class="item-info"><div class="t">${escapeHtml(v.title)}</div><div class="a">${escapeHtml(v.uploader)}</div><div class="plays">${v.plays||0} baar dekha gaya</div></div>
+            <video class="video-el" controls onplay="playVideoCounted('${v.id}')"><source src="${v.videoUrl}"></video>
+            <div class="actions">
+              <button class="action-btn" onclick="likeItem('video','${v.id}')">❤️ Like (${v.likes||0})</button>
+              <button class="action-btn" onclick="shareItem('video','${v.id}')">📤 Share</button>
+              <button class="action-btn" onclick="downloadItem('video','${v.id}')">⬇️ Download</button>
+              <button class="del-btn" onclick="removeVideo('${v.id}')">✕</button>
+            </div>
+            <div class="comments" id="comments_video_${v.id}">
+              <b style="font-size:12px">💬 Comments</b>
+              <div class="comment-row"><input id="name_video_${v.id}" placeholder="Aapka naam"></div>
+              <div class="comment-row"><input id="text_video_${v.id}" placeholder="Comment likhein..."><button class="action-btn" onclick="addComment('video','${v.id}')">Post</button></div>
+              <div class="comment-list"></div>
+            </div>
+          </div>`).join('');
+        filteredVideos.forEach(v => loadComments('video', v.id));
+      }
+    }
+  }
+</script>
+</body>
+</html>
